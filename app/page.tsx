@@ -13,9 +13,9 @@ export default function RoleSelectionPage() {
 
   const handleSelect = (role: Role) => {
     if (role === 'mine') {
-      router.push('/dashboard');
+      router.push('/login');
     } else {
-      router.push('/community');
+      window.location.href = '/community';
     }
   };
 

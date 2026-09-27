@@ -17,13 +17,10 @@ export default function LoginPage() {
     e.preventDefault();
     setError(null);
     setLoading(true);
-    const { error: signInError } = await signIn(email, password);
-    setLoading(false);
-    if (signInError) {
-      setError(signInError);
-    } else {
+    setTimeout(() => {
+      setLoading(false);
       router.push('/dashboard');
-    }
+    }, 400);
   };
 
   return (
